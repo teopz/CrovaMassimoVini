@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" media="screen" title="style" href="css/styles.css" />
         <meta name="description" content="Azienda Agricola e Cantina Crova Massimo, Sala Monferrato">
         <link rel="icon" type="image/jpg" href="images/logo.jpg" />
+         <script src="js/script.js"></script> 
     </head>
     <body>
         <div id="header" class="header">
@@ -34,22 +35,63 @@
                 </li>
             </ul>
         </div>
-      <!--
-      <div class="menu">
-      <ul id="vertnav" >
-      <li><input type="button" class="menubuttons" onclick="document.location='aziende.php'" value="<?php echo $lang['btn_aziende']?>"></input></li>
-      <li><input type="button" class="menubuttons" onclick="document.location='privati.php'" value="<?php echo $lang['btn_privati']?>"></input></li>
-      <li><input type="button" class="menubuttons" value="<?php echo $lang['btn_turismo']?>"></input>
-      <ul class="list">
-      <li><input type="button" class="menubuttons" onclick="document.location='proposte_tematiche.php'" value="<?php echo $lang['btn_tema']?>"></input></li>
-      <li><input type="button" class="menubuttons" onclick="document.location='esp_personalizzate.php'" value="<?php echo $lang['btn_esperienze']?>"></input></li>
-      </ul>
-      </li>
-      <li class="list"><input type="button" class="menubuttons" onclick="document.location='notizie.php'" value="<?php echo $lang['btn_notizie']?>"></input></li>
-      </ul>
-      </div>-->
 
-        <h3 class="center"><?php echo $lang['par_manutenzione']?></h3>
-        <h3 class="center"><a href="https://www.facebook.com/crovamassimovini/">Crova Massimo Vini</a></h3>
+        <div class="row">
+        <?php
+            $imgDir='images/album/album1';
+            $i=0;
+            if ($dir = array_diff(scandir($imgDir),array('.','..'))) {
+                foreach ($dir as $elemento) {
+                    $i++;
+                    $elemento=$imgDir."/".$elemento;
+                    echo "<div class=\"column\"><img src=\"".$elemento."\" onclick=\"openModal();currentSlide(".$i.")\" class=\"hover-shadow\"></div>";
+                }
+            }
+        ?>
+        </div>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <?php
+                    $i=0;
+                    $len=count($dir);
+                    foreach ($dir as $elemento) {
+                        $i++;
+                        $elemento=$imgDir."/".$elemento;
+                        echo "<div class=\"mySlides\">";
+                        echo "<div class=\"numbertext\">".$i." / ".$len."</div>";
+                        echo "<img src=\"".$elemento."\" style=\"width:100%\"></div>";
+                    }
+                ?>
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text 
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                Thumbnail image controls 
+                <div class="column">
+                    <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Trolltunga">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
+                </div>-->
+            </div>
+        </div>
     </body>
+
 </html>

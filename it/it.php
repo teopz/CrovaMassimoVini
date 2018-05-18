@@ -5,6 +5,7 @@ $lang = array();
 $lang['btn_azienda']="L'azienda";
 $lang['btn_chi']="Chi siamo";
 $lang['btn_negozio']="Il negozio";
+$lang['btn_album']="Le nostre immagini";
 /* fine testo pulsanti dei menu */
 
 $lang['titolone']="Vini di qualità di Sala Monferrato";
