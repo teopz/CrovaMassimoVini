@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" media="screen" title="style" href="css/styles.css" />
         <meta name="description" content="Azienda Agricola e Cantina Crova Massimo, Sala Monferrato">
         <link rel="icon" type="image/jpg" href="images/logo.jpg" />
-         <script src="js/script.js"></script> 
+         <script src="js/script.js"></script>
     </head>
     <body>
         <div id="header" class="header">
@@ -26,19 +26,27 @@
                 <li class="list"><input type="button" class="menubuttons" onclick="document.location='index.php'" value="<?php echo $lang['btn_negozio']?>"></input></li>
                 <li class="list"><input type="button" class="menubuttons" onclick="document.location='album.php'" value="<?php echo $lang['btn_album']?>"></input></li>
                 <li class="list"><input type="button" class="menubuttons" onclick="document.location='index.php'" value="<?php echo $lang['btn_chi']?>"></input></li>
-                
                 <li class="list"><input type="button" class="menubuttons" value="Lingua / Language"></input>
-                    <ul class="list">
+                    <ul>
                         <li><input type="button" class="menubuttons" onclick="document.location='index.php?lang=it'" value="Italiano"></input></li>
                         <li><input type="button" class="menubuttons" onclick="document.location='index.php?lang=en'" value="English"></input></li>
                     </ul>
                 </li>
             </ul>
         </div>
-
+        <div>
+          <h2><i>Galleria
+            <?php
+              if (isset($_GET['cartella'])){
+                $album=$_GET['cartella'];
+                echo $_GET['cartella'];
+              }else $album='album1';
+            ?>
+          </i></h2>
+        </div>
         <div class="row">
         <?php
-            $imgDir='images/album/album1';
+            $imgDir='images/album/'.$album;
             $i=0;
             if ($dir = array_diff(scandir($imgDir),array('.','..'))) {
                 foreach ($dir as $elemento) {
@@ -68,30 +76,7 @@
                 <!-- Next/previous controls -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <!-- Caption text 
-                <div class="caption-container">
-                    <p id="caption"></p>
-                </div>
-
-                Thumbnail image controls 
-                <div class="column">
-                    <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
-                </div>
-
-                <div class="column">
-                    <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Trolltunga">
-                </div>
-
-                <div class="column">
-                    <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
-                </div>
-
-                <div class="column">
-                    <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
-                </div>-->
             </div>
         </div>
     </body>
-
 </html>
