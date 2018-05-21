@@ -24,7 +24,7 @@
                 <li class="list"><input type="button" class="menubuttons" onclick="document.location='index.php'" value="Home"></input></li>
                 <li class="list"><input type="button" class="menubuttons" onclick="document.location='index.php'" value="<?php echo $lang['btn_azienda']?>"></input></li>
                 <li class="list"><input type="button" class="menubuttons" onclick="document.location='index.php'" value="<?php echo $lang['btn_negozio']?>"></input></li>
-                <li class="list"><input type="button" class="menubuttons" onclick="document.location='album.php'" value="<?php echo $lang['btn_album']?>"></input></li>
+                <li class="list"><input type="button" class="menubuttons" onclick="document.location='galleria.php'" value="<?php echo $lang['btn_album']?>"></input></li>
                 <li class="list"><input type="button" class="menubuttons" onclick="document.location='index.php'" value="<?php echo $lang['btn_chi']?>"></input></li>
                 <li class="list"><input type="button" class="menubuttons" value="Lingua / Language"></input>
                     <ul>
@@ -35,27 +35,28 @@
             </ul>
         </div>
         <div>
-          <h2><i>Galleria
-            <?php
-              if (isset($_GET['cartella'])){
-                $album=$_GET['cartella'];
-                echo $_GET['cartella'];
-              }else $album='album1';
-            ?>
-          </i></h2>
+            <h2 class="center">
+                <i>
+                    <?php
+                        if (isset($_GET['album'])){
+                            $album="images/album/".$_GET['album'];
+                        }else $album="images/album/album1";
+                        echo $_GET['album'];
+                    ?>
+                </i>
+            </h2>
         </div>
         <div class="row">
-        <?php
-            $imgDir='images/album/'.$album;
-            $i=0;
-            if ($dir = array_diff(scandir($imgDir),array('.','..'))) {
-                foreach ($dir as $elemento) {
-                    $i++;
-                    $elemento=$imgDir."/".$elemento;
-                    echo "<div class=\"column\"><img src=\"".$elemento."\" onclick=\"openModal();currentSlide(".$i.")\" class=\"hover-shadow\"></div>";
+            <?php
+                $i=0;
+                if ($dir = array_diff(scandir($album),array('.','..'))) {
+                    foreach ($dir as $elemento) {
+                        $i++;
+                        $elemento=$album."/".$elemento;
+                        echo "<div class=\"column\"><img src=\"".$elemento."\" onclick=\"openModal();currentSlide(".$i.")\" class=\"hover-shadow\"/></div>";
+                    }
                 }
-            }
-        ?>
+            ?>
         </div>
 
         <!-- The Modal/Lightbox -->
@@ -67,7 +68,7 @@
                     $len=count($dir);
                     foreach ($dir as $elemento) {
                         $i++;
-                        $elemento=$imgDir."/".$elemento;
+                        $elemento=$album."/".$elemento;
                         echo "<div class=\"mySlides\">";
                         echo "<div class=\"numbertext\">".$i." / ".$len."</div>";
                         echo "<img src=\"".$elemento."\" style=\"width:100%\"></div>";
