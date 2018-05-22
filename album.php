@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" media="screen" title="style" href="css/slideshow.css" />
         <meta name="description" content="Azienda Agricola e Cantina Crova Massimo, Sala Monferrato">
         <link rel="icon" type="image/jpg" href="images/logo.jpg" />
-         <script src="js/script.js"></script>
+        <script src="js/gallery.js"></script>
     </head>
     <body>
         <div id="header" class="header">
@@ -24,10 +24,10 @@
         <div class="content_menu">
             <ul class="list" id="horiznav">
                 <li class="list"><input type="button" class="menubuttons" onclick="document.location='index.php'" value="Home"></input></li>
-                <li class="list"><input type="button" class="menubuttons" onclick="document.location='index.php'" value="<?php echo $lang['btn_azienda']?>"></input></li>
-                <li class="list"><input type="button" class="menubuttons" onclick="document.location='index.php'" value="<?php echo $lang['btn_negozio']?>"></input></li>
+                <li class="list"><input type="button" class="menubuttons" onclick="document.location='azienda.php'" value="<?php echo $lang['btn_azienda']?>"></input></li>
+                <li class="list"><input type="button" class="menubuttons" onclick="document.location='negozio.php'" value="<?php echo $lang['btn_negozio']?>"></input></li>
                 <li class="list"><input type="button" class="menubuttons" onclick="document.location='galleria.php'" value="<?php echo $lang['btn_album']?>"></input></li>
-                <li class="list"><input type="button" class="menubuttons" onclick="document.location='index.php'" value="<?php echo $lang['btn_chi']?>"></input></li>
+                <li class="list"><input type="button" class="menubuttons" onclick="document.location='chisiamo.php'" value="<?php echo $lang['btn_chi']?>"></input></li>
                 <li class="list"><input type="button" class="menubuttons" value="Lingua / Language"></input>
                     <ul>
                         <li><input type="button" class="menubuttons" onclick="document.location='index.php?lang=it'" value="Italiano"></input></li>
