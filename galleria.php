@@ -4,8 +4,10 @@
         <title>Crova Massimo Vini</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" type="text/css" media="screen" title="style" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" media="screen" title="style" href="css/slideshow.css" />
         <meta name="description" content="Azienda Agricola e Cantina Crova Massimo, Sala Monferrato">
         <link rel="icon" type="image/jpg" href="images/logo.jpg" />
+        <script src="js/gallery.js"></script>
     </head>
     <body>
         <div id="header" class="header">
@@ -25,31 +27,38 @@
                 <li class="list"><input type="button" class="menubuttons" onclick="document.location='negozio.php'" value="<?php echo $lang['btn_negozio']?>"></input></li>
                 <li class="list"><input type="button" class="menubuttons" onclick="document.location='galleria.php'" value="<?php echo $lang['btn_album']?>"></input></li>
                 <li class="list"><input type="button" class="menubuttons" onclick="document.location='chisiamo.php'" value="<?php echo $lang['btn_chi']?>"></input></li>
-
                 <li class="list"><input type="button" class="menubuttons" value="Lingua / Language"></input>
-                    <ul class="list">
+                    <ul>
                         <li><input type="button" class="menubuttons" onclick="document.location='index.php?lang=it'" value="Italiano"></input></li>
                         <li><input type="button" class="menubuttons" onclick="document.location='index.php?lang=en'" value="English"></input></li>
                     </ul>
                 </li>
             </ul>
         </div>
-      <!--
-      <div class="menu">
-      <ul id="vertnav" >
-      <li><input type="button" class="menubuttons" onclick="document.location='aziende.php'" value="<?php echo $lang['btn_aziende']?>"></input></li>
-      <li><input type="button" class="menubuttons" onclick="document.location='privati.php'" value="<?php echo $lang['btn_privati']?>"></input></li>
-      <li><input type="button" class="menubuttons" value="<?php echo $lang['btn_turismo']?>"></input>
-      <ul class="list">
-      <li><input type="button" class="menubuttons" onclick="document.location='proposte_tematiche.php'" value="<?php echo $lang['btn_tema']?>"></input></li>
-      <li><input type="button" class="menubuttons" onclick="document.location='esp_personalizzate.php'" value="<?php echo $lang['btn_esperienze']?>"></input></li>
-      </ul>
-      </li>
-      <li class="list"><input type="button" class="menubuttons" onclick="document.location='notizie.php'" value="<?php echo $lang['btn_notizie']?>"></input></li>
-      </ul>
-      </div>-->
-        <h3 class="center"><?php echo $lang['index_text0']?></h3>
-        <h3 class="center"><?php echo $lang['par_manutenzione']?></h3>
-        <h3 class="center"><a href="https://www.facebook.com/crovamassimovini/">Crova Massimo Vini</a></h3>
+        <h2 class="center"><i><?php echo $lang['titolo_galleria'];?></i></h2><br/><br/>
+        <div class="row">
+            <?php
+                $imgDir='images/album';
+                $i=0;
+                if ($dir = array_diff(scandir($imgDir),array('.','..'))) {
+                    foreach ($dir as $album) {
+                        $i=0;
+                        if (is_dir($imgDir."/".$album)){
+                            $subDir = array_diff(scandir($imgDir."/".$album),array('.','..'));
+                            foreach ($subDir as $imgCopertina) {
+                                if ($i==0){
+                                    echo "<div class=\"column\">";
+                                    echo "<h4 class=\"text\">".$album."</h4>";
+                                    echo "<a href=\"album.php?album=".$album."\">";
+                                    echo "<img src=\"".$imgDir."/".$album."/".$imgCopertina."\"class=\"hover-shadow\"/>";
+                                    echo "</a></div>";
+                                }
+                                $i++;
+                            }
+                        }
+                    }
+                }
+            ?>
+        </div>
     </body>
 </html>
