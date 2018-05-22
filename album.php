@@ -3,7 +3,9 @@
     <head>
         <title>Crova Massimo Vini</title>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" title="style" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" media="screen" title="style" href="css/slideshow.css" />
         <meta name="description" content="Azienda Agricola e Cantina Crova Massimo, Sala Monferrato">
         <link rel="icon" type="image/jpg" href="images/logo.jpg" />
          <script src="js/script.js"></script>
@@ -12,7 +14,7 @@
         <div id="header" class="header">
             <div>
                 <br/>
-                <a href="index.php" ><img src="/images/logo.jpg" width=130px class="headIMG"></a>
+                <a href="index.php" ><img src="images/logo.jpg" width=130px class="headIMG"></a>
                 <div class="mainTitle">
                     <h1><i>Crova Massimo Vini</i></h1>
                     <h2><i><?php echo $lang['titolone'];?></i></h2><br/><br/><br/><br/><br/>
@@ -77,6 +79,19 @@
                 <!-- Next/previous controls -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- <div class="rowMagnified" style="background:black">
+                    </br></br>
+                    <?php/*
+                        $i=0;
+                        foreach ($dir as $elemento) {
+                            $i++;
+                            $elemento=$album."/".$elemento;
+                            echo "<div class=\"column\">";
+                            echo "<img class=\"hover-shadow\" src=\"".$elemento."\" onclick=\"currentSlide(".$i.")\" style=\"width:100%\"></div>";
+                        }*/
+                    ?>
+                </div> -->
             </div>
         </div>
     </body>

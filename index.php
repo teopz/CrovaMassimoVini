@@ -11,7 +11,7 @@
         <div id="header" class="header">
             <div>
                 <br/>
-                <a href="index.php" ><img src="/images/logo.jpg" width=130px class="headIMG"></a>
+                <a href="index.php" ><img src="images/logo.jpg" width=130px class="headIMG"></a>
                 <div class="mainTitle">
                     <h1><i>Crova Massimo Vini</i></h1>
                     <h2><i><?php echo $lang['titolone'];?></i></h2><br/><br/><br/><br/><br/>

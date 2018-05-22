@@ -4,6 +4,7 @@
         <title>Crova Massimo Vini</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" type="text/css" media="screen" title="style" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" media="screen" title="style" href="css/slideshow.css" />
         <meta name="description" content="Azienda Agricola e Cantina Crova Massimo, Sala Monferrato">
         <link rel="icon" type="image/jpg" href="images/logo.jpg" />
         <script src="js/script.js"></script>
@@ -12,7 +13,7 @@
         <div id="header" class="header">
             <div>
                 <br/>
-                <a href="index.php" ><img src="/images/logo.jpg" width=130px class="headIMG"></a>
+                <a href="index.php" ><img src="images/logo.jpg" width=130px class="headIMG"></a>
                 <div class="mainTitle">
                     <h1><i>Crova Massimo Vini</i></h1>
                     <h2><i><?php echo $lang['titolone'];?></i></h2><br/><br/><br/><br/><br/>
@@ -34,7 +35,7 @@
                 </li>
             </ul>
         </div>
-        <h2 class="center"><i>Le immagini della nostra azienda</i></h2><br/><br/>
+        <h2 class="center"><i><?php echo $lang['titolo_galleria'];?></i></h2><br/><br/>
         <div class="row">
             <?php
                 $imgDir='images/album';
@@ -46,7 +47,11 @@
                             $subDir = array_diff(scandir($imgDir."/".$album),array('.','..'));
                             foreach ($subDir as $imgCopertina) {
                                 if ($i==0){
-                                    echo "<div class=\"column\"><a href=\"album.php?album=".$album."\"><img src=\"".$imgDir."/".$album."/".$imgCopertina."\"class=\"hover-shadow\"/></a></div>";
+                                    echo "<div class=\"column\">";
+                                    echo "<h4 class=\"text\">".$album."</h4>";
+                                    echo "<a href=\"album.php?album=".$album."\">";
+                                    echo "<img src=\"".$imgDir."/".$album."/".$imgCopertina."\"class=\"hover-shadow\"/>";
+                                    echo "</a></div>";
                                 }
                                 $i++;
                             }
