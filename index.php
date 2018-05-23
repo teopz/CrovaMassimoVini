@@ -34,22 +34,16 @@
                 </li>
             </ul>
         </div>
-      <!--
-      <div class="menu">
-      <ul id="vertnav" >
-      <li><input type="button" class="menubuttons" onclick="document.location='aziende.php'" value="<?php echo $lang['btn_aziende']?>"></input></li>
-      <li><input type="button" class="menubuttons" onclick="document.location='privati.php'" value="<?php echo $lang['btn_privati']?>"></input></li>
-      <li><input type="button" class="menubuttons" value="<?php echo $lang['btn_turismo']?>"></input>
-      <ul class="list">
-      <li><input type="button" class="menubuttons" onclick="document.location='proposte_tematiche.php'" value="<?php echo $lang['btn_tema']?>"></input></li>
-      <li><input type="button" class="menubuttons" onclick="document.location='esp_personalizzate.php'" value="<?php echo $lang['btn_esperienze']?>"></input></li>
-      </ul>
-      </li>
-      <li class="list"><input type="button" class="menubuttons" onclick="document.location='notizie.php'" value="<?php echo $lang['btn_notizie']?>"></input></li>
-      </ul>
-      </div>-->
-        <h3 class="center"><?php echo $lang['index_text0']?></h3>
-        <h3 class="center"><?php echo $lang['par_manutenzione']?></h3>
-        <h3 class="center"><img src="images/fb.png" width="50px" height="auto"/><br /><a href="https://www.facebook.com/crovamassimovini/">Crova Massimo Vini</a></h3>
+        <div class="page-wrap">
+            <h3 class="center"><?php echo $lang['index_text0']?></h3>
+        </div>
+
     </body>
+    <footer>
+        <h3 class="center"><img src="images/fb.png" width="35px" height="auto"/><br /><a href="https://www.facebook.com/crovamassimovini/">Crova Massimo Vini</a></h3>
+        <iframe style="margin-left:auto; margin-right:auto" src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/crovamassimovini?fref=ts"
+            scrolling="no" frameborder="0"
+            style="border:none; width:100%; height:60px;">
+        </iframe>
+    </footer>
 </html>
