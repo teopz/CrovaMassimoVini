@@ -6,8 +6,10 @@
         <link rel="stylesheet" type="text/css" media="screen" title="style" href="css/styles.css" />
         <meta name="description" content="Azienda Agricola e Cantina Crova Massimo, Sala Monferrato">
         <link rel="icon" type="image/jpg" href="images/logo.jpg" />
+        <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+        <script src="js/maps.js"></script>
     </head>
-    <body>
+    <body onload="myMap();">
         <div id="header" class="header">
             <div>
                 <br/>
@@ -34,16 +36,18 @@
                 </li>
             </ul>
         </div>
-        <div class="page-wrap">
-            <h3 class="center"><?php echo $lang['index_text0']?></h3>
+        <div class="center">
+            <h2><?php echo $lang['indirizzo'];?></h2>
+            <h3><i>Via Olearo 27 15030<br />Sala Monferrato (AL)</i></h3>
+            <h2><?php echo $lang['sede_legale'];?></h2>
+            <h3><i>Via Asilo 14<br />15030 Sala Monferrato (AL)</i></h3>
+            <h2><?php echo $lang['contatti'];?></h2>
+            <h3><i>E-Mail: ilnotu@libero.it</i></h3>
+            <h3><i>Massimo 329 4925192</i></h3>
+            <h3><i>Silvia 349 3872704</i></h3>
         </div>
-
+        <div class="map" id="map"></div>
+        <h3 class="center"><?php echo $lang['par_manutenzione']?></h3>
+        <h3 class="center"><img src="images/fb.png" width="50px" height="auto"/><br /><a href="https://www.facebook.com/crovamassimovini/">Crova Massimo Vini</a></h3>
     </body>
-    <footer>
-        <h3 class="center"><img src="images/fb.png" width="35px" height="auto"/><br /><a href="https://www.facebook.com/crovamassimovini/">Crova Massimo Vini</a></h3>
-        <iframe style="margin-left:auto; margin-right:auto" src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/crovamassimovini?fref=ts"
-            scrolling="no" frameborder="0"
-            style="border:none; width:100%; height:60px;">
-        </iframe>
-    </footer>
 </html>

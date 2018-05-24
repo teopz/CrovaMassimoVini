@@ -4,7 +4,19 @@ body{
 
 html{
 	min-height:100%; /*per evitare che lo sfondo si divida in bande*/
-	/*background:url(/images/crova.jpg)*/
+	background:url(../images/BG.jpg)
+}
+
+footer {
+	display:block !important;
+	margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+iframe {
+	display:block !important;
+	margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .headIMG{

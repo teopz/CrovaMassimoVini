@@ -26,7 +26,7 @@
                 <li class="list"><input type="button" class="menubuttons" onclick="document.location='azienda.php'" value="<?php echo $lang['btn_azienda']?>"></input></li>
                 <li class="list"><input type="button" class="menubuttons" onclick="document.location='negozio.php'" value="<?php echo $lang['btn_negozio']?>"></input></li>
                 <li class="list"><input type="button" class="menubuttons" onclick="document.location='galleria.php'" value="<?php echo $lang['btn_album']?>"></input></li>
-                <li class="list"><input type="button" class="menubuttons" onclick="document.location='chisiamo.php'" value="<?php echo $lang['btn_chi']?>"></input></li>
+                <li class="list"><input type="button" class="menubuttons" onclick="document.location='contatti.php'" value="<?php echo $lang['btn_chi']?>"></input></li>
                 <li class="list"><input type="button" class="menubuttons" value="Lingua / Language"></input>
                     <ul>
                         <li><input type="button" class="menubuttons" onclick="document.location='index.php?lang=it'" value="Italiano"></input></li>
