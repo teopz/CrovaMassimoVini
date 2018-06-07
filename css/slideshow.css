@@ -1,6 +1,10 @@
 /*Slideshow*/
 .row {
-  margin-left: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin-left: 8%;
+    margin-right: 8%;
 }
 
 .rowMagnified {
@@ -9,6 +13,14 @@
 
 .row > .column {
   padding: 0 8px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
 }
 
 .row:after {
@@ -40,12 +52,11 @@
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: black;
   margin: auto;
   padding: 0;
-  width: 70%;
+  width: 85%;
   height: auto;
-  max-height: 90%;
 }
 
 /* The Close Button */

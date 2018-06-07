@@ -73,7 +73,7 @@
                         $elemento=$album."/".$elemento;
                         echo "<div class=\"mySlides\">";
                         echo "<div class=\"numbertext\">".$i." / ".$len."</div>";
-                        echo "<img src=\"".$elemento."\" style=\"width:100%\"></div>";
+                        echo "<img src=\"".$elemento."\" style=\"height:90%; display:block; margin: 0 auto !important; max-width:100%; object-fit:cover;\"></div>";
                     }
                 ?>
                 <!-- Next/previous controls -->

@@ -26,6 +26,12 @@ iframe {
 	border-radius:4px
 }
 
+.IndexIMG{
+	width:40%;
+	border-radius:30px;
+	margin-left:30%;
+}
+
 .mainTitle{
 	margin-left:20%;
 	margin-right:15%;
