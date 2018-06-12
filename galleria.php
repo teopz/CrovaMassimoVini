@@ -55,7 +55,7 @@
                                 echo "<div class=\"column\">";
                                 echo "<h4 class=\"text\">".$album."</h4>";
                                 echo "<a href=\"album.php?album=".$album."\">";
-                                echo "<img src=\"".$imgDir."/".$album."/".$imgCopertina."\"class=\"hover-shadow\"/>";
+                                echo "<img src=\"".$path."/".$imgCopertina."\"class=\"hover-shadow\"/>";
                                 echo "</a></div>";
                             }
                             $i++;
