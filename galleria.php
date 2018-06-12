@@ -43,18 +43,22 @@
                 if ($dir = array_diff(scandir($imgDir),array('.','..'))) {
                     foreach ($dir as $album) {
                         $i=0;
-                        if (is_dir($imgDir."/".$album)){
-                            $subDir = array_diff(scandir($imgDir."/".$album),array('.','..'));
-                            foreach ($subDir as $imgCopertina) {
-                                if ($i==0){
-                                    echo "<div class=\"column\">";
-                                    echo "<h4 class=\"text\">".$album."</h4>";
-                                    echo "<a href=\"album.php?album=".$album."\">";
-                                    echo "<img src=\"".$imgDir."/".$album."/".$imgCopertina."\"class=\"hover-shadow\"/>";
-                                    echo "</a></div>";
-                                }
-                                $i++;
+                        if (is_dir($imgDir."/".$album."/thumbnails")){
+                            $path=$imgDir."/".$album."/thumbnails";
+                        }
+                        else {
+                            $path=$imgDir."/".$album;
+                        }
+                        $subDir = array_diff(scandir($path),array('.','..'));
+                        foreach ($subDir as $imgCopertina) {
+                            if ($i==0){
+                                echo "<div class=\"column\">";
+                                echo "<h4 class=\"text\">".$album."</h4>";
+                                echo "<a href=\"album.php?album=".$album."\">";
+                                echo "<img src=\"".$path."/".$imgCopertina."\"class=\"hover-shadow\"/>";
+                                echo "</a></div>";
                             }
+                            $i++;
                         }
                     }
                 }
