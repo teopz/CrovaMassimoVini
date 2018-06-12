@@ -42,7 +42,7 @@
                     <?php
                         if (isset($_GET['album'])){
                             $album="images/album/".$_GET['album'];
-                        }else $album="images/album/album1";
+                        }else $album="images/album/In Vigna";
                         echo $_GET['album'];
                     ?>
                 </i>
@@ -51,10 +51,10 @@
         <div class="row">
             <?php
                 $i=0;
-                if ($dir = array_diff(scandir($album),array('.','..'))) {
+                if ($dir = array_diff(scandir($album."/thumbnails"),array('.','..'))) {
                     foreach ($dir as $elemento) {
                         $i++;
-                        $elemento=$album."/".$elemento;
+                        $elemento=$album."/thumbnails/".$elemento;
                         echo "<div class=\"column\"><img src=\"".$elemento."\" onclick=\"openModal();currentSlide(".$i.")\" class=\"hover-shadow\"/></div>";
                     }
                 }
@@ -67,31 +67,17 @@
             <div class="modal-content">
                 <?php
                     $i=0;
-                    $len=count($dir);
+                    $dir = array_diff(scandir($album."/thumbnails"),array('.','..'));
                     foreach ($dir as $elemento) {
                         $i++;
                         $elemento=$album."/".$elemento;
                         echo "<div class=\"mySlides\">";
-                        echo "<div class=\"numbertext\">".$i." / ".$len."</div>";
                         echo "<img src=\"".$elemento."\" style=\"height:90%; display:block; margin: 0 auto !important; max-width:100%; object-fit:cover;\"></div>";
                     }
                 ?>
                 <!-- Next/previous controls -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <!-- <div class="rowMagnified" style="background:black">
-                    </br></br>
-                    <?php/*
-                        $i=0;
-                        foreach ($dir as $elemento) {
-                            $i++;
-                            $elemento=$album."/".$elemento;
-                            echo "<div class=\"column\">";
-                            echo "<img class=\"hover-shadow\" src=\"".$elemento."\" onclick=\"currentSlide(".$i.")\" style=\"width:100%\"></div>";
-                        }*/
-                    ?>
-                </div> -->
             </div>
         </div>
     </body>
