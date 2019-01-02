@@ -38,7 +38,7 @@
         </div>
         <div class="center">
             <h2><?php echo $lang['indirizzo'];?></h2>
-            <h3><i>Via Olearo 27 15030<br />Sala Monferrato (AL)</i></h3>
+            <h3><i>Via Olearo 27<br />15030 Sala Monferrato (AL)</i></h3>
             <h2><?php echo $lang['sede_legale'];?></h2>
             <h3><i>Via Asilo 14<br />15030 Sala Monferrato (AL)</i></h3>
             <h2><?php echo $lang['contatti'];?></h2>
