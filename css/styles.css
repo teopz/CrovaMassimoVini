@@ -27,10 +27,11 @@ iframe {
 }
 
 .IndexIMG{
+	display:block !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
 	width:40%;
 	border-radius:30px;
-	margin-left: auto !important;
-    margin-right: auto !important;
 }
 
 .mainTitle{
