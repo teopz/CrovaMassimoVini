@@ -36,7 +36,6 @@
                     </li>
                 </ul>
             </div>
-            <div class="content_menu">
         </div>
         <h3 class="center"><?php echo $lang['azienda_text0']?></h3>
         <h3 class="center"><?php echo $lang['par_manutenzione']?></h3>
