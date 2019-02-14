@@ -38,7 +38,6 @@
                     </li>
                 </ul>
             </div>
-            <div class="content_menu">
         </div>
         <h2 class="center"><i><?php echo $lang['titolo_galleria'];?></i></h2><br/><br/>
         <div class="row">

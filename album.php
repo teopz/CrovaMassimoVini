@@ -39,7 +39,6 @@
                     </li>
                 </ul>
             </div>
-            <div class="content_menu">
         </div>
         <div>
             <h2 class="center">
@@ -81,8 +80,10 @@
                     }
                 ?>
                 <!-- Next/previous controls -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="content_menu">
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
             </div>
         </div>
     </body>

@@ -38,7 +38,6 @@
                     </li>
                 </ul>
             </div>
-            <div class="content_menu">
         </div>
         <div class="center">
             <h2><?php echo $lang['indirizzo'];?></h2>

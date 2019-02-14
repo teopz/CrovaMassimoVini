@@ -36,7 +36,6 @@
                     </li>
                 </ul>
             </div>
-            <div class="content_menu">
         </div>
         <div class="page-wrap">
             <h3 class="center"><?php echo $lang['index_text0']?></h3>
