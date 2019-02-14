@@ -3,6 +3,7 @@ $lang = array();
 
 /* testo pulsanti dei menu */
 $lang['btn_azienda']="The farm";
+$lang['btn_eventi']="News and Events";
 $lang['btn_chi']="Contacts";
 $lang['btn_negozio']="The shop";
 $lang['btn_album']="Our pictures";

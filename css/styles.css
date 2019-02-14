@@ -124,8 +124,8 @@ iframe {
 	color: rgba(0, 0, 0, 1);
 	border: 1px solid rgba(000,000,000,0.3);
 	margin:0px;
-	width:15%;
-	min-width:140px;
+	width:12%;
+	min-width:120px;
 	vertical-align:middle;
 	white-space: normal;
 	height:4%;
@@ -168,8 +168,10 @@ list-style-type:none;
 }
 
 .content_menu{
-	margin-left:8%;
-	margin-right:auto;
+	display:block !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	width: 90%;
 }
 
 ul#vertnav, #vertnav ul{/*remove the bullets from the dropdown ul as well*/
@@ -230,14 +232,20 @@ list-style-type:none;
 } */
 
 /*campo di stile degli oggetti nella pagina*/
-/*
+
 fieldset{
-	width:100%;
-	border:0;
+	display:inline;
+	width: 27%;
+	border: 2px solid rgba(000,000,000,0.3);
+	border-radius: 5px;
 	background:white;
 	box-shadow:0 0 10px #999;
-}*/
+  	transition: 0.3s;
+}
 
+fieldset:hover {
+	background-color: #d1cfcf;
+}
 /*per tutte le scritte che devono stare al centro*/
 .center{
 	text-align:center;
@@ -262,7 +270,6 @@ h3 {
 
 h4 {
 	font-family: Cambria, serif;
-	/*line-height: 1.3em;*/
 	text-align: justify;
 }
 
@@ -281,7 +288,7 @@ a:link {text-decoration:none;}
 a:visited {text-decoration:none;}
 a:hover {
 	text-decoration:underline;
-	color:brown;
+	color:white;
 }
 a:active {text-decoration:underline;}
 
