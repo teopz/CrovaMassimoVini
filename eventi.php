@@ -36,18 +36,23 @@
                     </li>
                 </ul>
             </div>
-            <div class="content_menu">
         </div>
-        <div class="page-wrap">
-            <h3 class="center"><?php echo $lang['index_text0']?></h3>
+        <div class="content_menu">
+            </br>
+            <?php
+                if(!($database=mysql_connect("localhost:3306", "croma_croma1", "Crovamassimo321!"))) die ("Non è stato possibile connettersi al DB");
+    				mysql_select_db("croma1_vini");
+            ?>
+            <fieldset>
+                <h3 class="center">
+                    Dicono di noi...</br>
+                    <a href="https://www.papilleclandestine.it/nel-bicchiere/aleatico-crova-sala-monferrato/">Che ci fa un aleatico in Monferrato?
+                        </br>
+                        <img src="news/immagini/sfizioso.jpg" width="auto" height="auto"/>
+                    </a>
+                </h3>
+            </fieldset>
         </div>
-        <img class="IndexIMG" src="images/crova.jpg" />
+        <h3 class="center"><img src="images/fb.png" width="50px" height="auto"/><br /><a href="https://www.facebook.com/crovamassimovini/">Crova Massimo Vini</a></h3>
     </body>
-    <footer>
-        <h3 class="center"><img src="images/fb.png" width="35px" height="auto"/><br /><a href="https://www.facebook.com/crovamassimovini/">Crova Massimo Vini</a></h3>
-        <iframe style="margin-left:auto; margin-right:auto" src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/crovamassimovini?fref=ts"
-            scrolling="no" frameborder="0"
-            style="border:none; width:100%; height:60px;">
-        </iframe>
-    </footer>
 </html>
