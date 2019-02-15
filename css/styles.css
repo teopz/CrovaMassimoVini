@@ -1,5 +1,5 @@
 body{
-	min-width:1024px;/*misura di schermo minima per una visualizzazione ottimale*/
+	min-width:1200px;/*misura di schermo minima per una visualizzazione ottimale*/
 }
 
 html{
@@ -27,10 +27,11 @@ iframe {
 }
 
 .IndexIMG{
+	display:block !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
 	width:40%;
 	border-radius:30px;
-	margin-left: auto !important;
-    margin-right: auto !important;
 }
 
 .mainTitle{
@@ -61,7 +62,7 @@ iframe {
 }
 
 /*da qui codice per il resize su schermi di cellulari*/
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1200px){
 	.header{
 		margin-left:auto;
 		margin-right:auto;
@@ -235,8 +236,9 @@ list-style-type:none;
 /*campo di stile degli oggetti nella pagina*/
 
 fieldset{
-	display:inline;
-	width: 27%;
+	display:inline-grid;
+	width: 500px;
+	height: 500px;
 	border: 2px solid rgba(000,000,000,0.3);
 	border-radius: 5px;
 	background:white;
@@ -247,6 +249,13 @@ fieldset{
 fieldset:hover {
 	background-color: #d1cfcf;
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 /*per tutte le scritte che devono stare al centro*/
 .center{
 	text-align:center;

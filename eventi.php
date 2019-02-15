@@ -4,6 +4,7 @@
         <title>Crova Massimo Vini</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" type="text/css" media="screen" title="style" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" media="screen" title="style" href="css/slideshow.css" />
         <meta name="description" content="Azienda Agricola e Cantina Crova Massimo, Sala Monferrato">
         <link rel="icon" type="image/jpg" href="images/logo.jpg" />
     </head>
@@ -37,13 +38,32 @@
                 </ul>
             </div>
         </div>
-        <div class="content_menu">
+        </br>
+        <div class="container">
             </br>
             <?php
-                if(!($database=mysql_connect("localhost:3306", "croma_croma1", "Crovamassimo321!"))) die ("Non è stato possibile connettersi al DB");
-    				mysql_select_db("croma1_vini");
+                ini_set('display_errors', 1);
+                error_reporting(E_ALL);
+
+                $mysqli = new mysqli("localhost", "croma_croma1", "Crovamassimo321!", "croma1_vini");
+
+                if ($mysqli->connect_errno) {
+                    printf("Connect failed: %s\n", $mysqli->connect_error);
+                    exit();
+                }
+
+                $result = $mysqli->query("SELECT titolo, testo FROM news WHERE test<>1 ORDER BY id DESC");
+                while ($row = $result->fetch_assoc()) {
+                    echo "<fieldset>";
+                        echo "<h3 class=\"center\">";
+                            echo $row["titolo"]."</br>";
+                            echo $row["testo"];
+                        echo "</h3>";
+                    echo "</fieldset>";
+                }
             ?>
-            <fieldset>
+
+            <!--<fieldset>
                 <h3 class="center">
                     Dicono di noi...</br>
                     <a href="https://www.papilleclandestine.it/nel-bicchiere/aleatico-crova-sala-monferrato/">Che ci fa un aleatico in Monferrato?
@@ -51,7 +71,7 @@
                         <img src="news/immagini/sfizioso.jpg" width="auto" height="auto"/>
                     </a>
                 </h3>
-            </fieldset>
+            </fieldset>-->
         </div>
         <h3 class="center"><img src="images/fb.png" width="50px" height="auto"/><br /><a href="https://www.facebook.com/crovamassimovini/">Crova Massimo Vini</a></h3>
     </body>
