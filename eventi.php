@@ -52,7 +52,7 @@
                     exit();
                 }
 
-                $result = $mysqli->query("SELECT titolo, testo FROM news WHERE test<>1 ORDER BY id DESC");
+                $result = $mysqli->query("SELECT titolo, testo FROM news WHERE test<>1 ORDER BY ordinamento DESC");
                 while ($row = $result->fetch_assoc()) {
                     echo "<fieldset>";
                         echo "<h3 class=\"center\">";
