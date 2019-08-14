@@ -36,10 +36,14 @@
                 </div>
             </li>
         </ul>
-        <div class="page-wrap">
-            <h3 class="center"><?php echo $lang['index_text0']?></h3>
+        <div class="fieldsetLarge">
+            <div class="fieldsetInternal">
+                <div class="page-wrap">
+                    <h3 class="center"><?php echo $lang['index_text0']?></h3>
+                </div>
+                <img class="IndexIMG" src="images/crova.jpg" />
+            </div>
         </div>
-        <img class="IndexIMG" src="images/crova.jpg" />
     </body>
     <footer>
         <h3 class="center"><img src="images/fb.png" width="35px" height="auto"/><br /><a href="https://www.facebook.com/crovamassimovini/">Crova Massimo Vini</a></h3>
