@@ -19,18 +19,31 @@ iframe {
     margin-right: auto !important;
 }
 
+.pLeft{
+	text-align: left;
+}
+
+.pCenter{
+	text-align: center;
+}
+
+.pJustify{
+	text-align: justify;
+}
+
 .headIMG{
 	float:left;
 	margin-left:0.5%;
 	box-shadow:0 0 20px #999;
-	border-radius:4px
+	border-radius:4px;
+	min-width: 150px;
 }
 
 .IndexIMG{
 	display:block !important;
 	margin-left: auto !important;
 	margin-right: auto !important;
-	width:40%;
+	width:80%;
 	border-radius:30px;
 }
 
@@ -93,69 +106,8 @@ iframe {
 	opacity:0.85;
 }
 .menubuttons:hover {
-	font-size:95%;
 	font-weight:bold;
 }
-
-/*questi servono per il menu orizzontale*/
-.list {
-/*visualizzo tutti i pulsanti sulla stessa linea*/
-    display: inline;
-}
-
-ul#horiznav, #horiznav ul{/*remove the bullets from the dropdown ul as well*/
-margin:0;
-padding:0;
-list-style-type:none;
-}
-
-#horiznav li{
-position:relative/*set position:relative as the start point for absolutely positioning the dropdown*/
-}
-
-#horiznav li ul{
-display:none;/*hide the dropdown*/
-position:absolute;/*position it absolutely..*/
-left:0;/*align the left edge with the left edge of the parent li...*/
-/*top:32px;...and 32px down from the top - 30px height + 2px for the border*/
-list-style-type:none;
-}
-
-#horiznav li:hover ul {
-display:block;/*display the ul when the parent li is hovered*/
-list-style-type:none;
-}
-
-.content_menu{
-	display:block !important;
-	margin-left: auto !important;
-	margin-right: auto !important;
-	width: 90%;
-}
-
-ul#vertnav, #vertnav ul{/*remove the bullets from the dropdown ul as well*/
-margin:0;
-padding:0;
-list-style-type:none;
-}
-
-#vertnav li{
-position:relative/*set position:relative as the start point for absolutely positioning the dropdown*/
-}
-
-#vertnav li ul{
-display:none;/*hide the dropdown*/
-position:absolute;/*position it absolutely..*/
-left:145px;/*align the left edge with the left edge of the parent li...*/
-top:0px;/*...and 32px down from the top - 30px height + 2px for the border*/
-list-style-type:none;
-}
-
-#vertnav li:hover ul {
-display:inline;/*display the ul when the parent li is hovered*/
-list-style-type:none;
-}
-
 
 /*caselle di testo*/
 .text{
@@ -191,6 +143,22 @@ list-style-type:none;
 } */
 
 /*campo di stile degli oggetti nella pagina*/
+.fieldsetLarge{
+	width: 60%;
+	border: 2px solid rgba(000,000,000,0.3);
+	border-radius: 5px;
+	background:white;
+	box-shadow:0 0 10px #999;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.fieldsetInternal{
+	width: 90%;
+	background:white;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .fieldset{
 	display:inline-grid;
@@ -337,12 +305,13 @@ a:hover{
 /* TRIGRAMMA */
 /* stile e invisibilità */
 .showMenu{
-	width:80px;
+	width:150px;
+	height: 150px;
 	border:1px solid black;
 	margin:auto;
 	color:black;
 	text-align:center;
-	font-size:30px;
+	font-size:100px;
 	margin-bottom:10px;
 	display:none;
 	margin-left: 2.5%;
@@ -415,7 +384,7 @@ input[type=checkbox]:checked ~ #menu{
 	}
 
 	.menubuttons{
-		font-size:90%;
+		font-size:30px;
 		text-shadow: 0 1px 1px #fff;
 		color: rgba(0, 0, 0, 1);
 		border: 1px solid rgba(000,000,000,0.3);

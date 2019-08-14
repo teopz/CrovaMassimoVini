@@ -36,8 +36,12 @@
                 </div>
             </li>
         </ul>
-        <h3 class="center"><?php echo $lang['azienda_text0']?></h3>
-        <h3 class="center"><?php echo $lang['par_manutenzione']?></h3>
-        <h3 class="center"><img src="images/fb.png" width="50px" height="auto"/><br /><a href="https://www.facebook.com/crovamassimovini/">Crova Massimo Vini</a></h3>
+        <div class="fieldsetLarge">
+            <div class="fieldsetInternal">
+                <h3 class="center"><?php echo $lang['azienda_text0']?></h3>
+                <h3 class="center"><?php echo $lang['par_manutenzione']?></h3>
+                <h3 class="center"><img src="images/fb.png" width="50px" height="auto"/><br /><a href="https://www.facebook.com/crovamassimovini/">Crova Massimo Vini</a></h3>
+            </div>
+        </div>
     </body>
 </html>
