@@ -40,6 +40,7 @@
             </div>
         </div>
         <h2 class="center"><i><?php echo $lang['titolo_galleria'];?></i></h2><br/><br/>
+
         <div class="row">
             <?php
                 $imgDir='images/album';
@@ -56,11 +57,11 @@
                         $subDir = array_diff(scandir($path),array('.','..'));
                         foreach ($subDir as $imgCopertina) {
                             if ($i==0){
-                                echo "<div class=\"column\">";
+                                echo "<fieldset class=\"column\" style=\"border-radius: 5px;\">";
                                 echo "<h4 class=\"text\">".$album."</h4>";
                                 echo "<a href=\"album.php?album=".$album."\">";
                                 echo "<img src=\"".$path."/".$imgCopertina."\"class=\"hover-shadow\"/>";
-                                echo "</a></div>";
+                                echo "</a></fieldset>";
                             }
                             $i++;
                         }

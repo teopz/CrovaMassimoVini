@@ -54,7 +54,7 @@
 
                 $result = $mysqli->query("SELECT titolo, testo FROM news WHERE test<>1 ORDER BY ordinamento DESC");
                 while ($row = $result->fetch_assoc()) {
-                    echo "<fieldset>";
+                    echo "<fieldset class=\"fieldset\">";
                         echo "<h3 class=\"center\">";
                             echo $row["titolo"]."</br>";
                             echo $row["testo"];
