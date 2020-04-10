@@ -31,7 +31,8 @@ $lang['azienda_text0']="<p class=\"pJustify\">Since 1903 Crova family produces i
     <li><p class=\"pJustify\">finally a particular wine from red raisins: “La coccinella”, produced with traditional methods; we harvest grapes in late November,
     place them on grids in the barn having the patience to remove every week the bad grapes, until in January we have them pressed and then fermented
     for 10 month. The name recalls the various bugs you can find in the vineyard thanks to lack of herbicides.</p></li></ul>";
-$lang['negozio_text0']="The online shop is not ready yet! <br />Call us to know the availability of our products and shipping options.<br />";
+$lang['negozio_text0']="Call us to know the availability of our products and shipping options.<br /> Due to the COVID-19 outbreak, we joined the Monferrato Delivery project.<br/>
+	You can find our products for local delivery at this link:<br/>";
 $lang['par_manutenzione']="Visit us on our facebook page:";
 
 $lang['indirizzo']="Address";

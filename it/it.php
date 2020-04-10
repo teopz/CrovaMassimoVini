@@ -32,7 +32,8 @@ $lang['azienda_text0']="<p class=\"pJustify\">Dal 1903 la famiglia Crova produce
     <li><p class=\"pJustify\">infine il particolare vino da uve rosse appassite “La coccinella”, prodotto con il metodo tradizionale; raccogliendo l’uva a fine novembre,
     sistemandola sui graticci sulla cascina con la pazienza di togliere ogni settimana gli acini da scartare, a gennaio la torchiatura dei grappoli
     con una fermentazione di circa 10 mesi, il nome richiama i numerosi insetti presenti nei vigneti grazie al mancato uso di diserbanti.</p></li></ul>";
-$lang['negozio_text0']="Il negozio online non è ancora disponibile! <br />Chiamate per conoscere la disponibilità dei nostri prodotti e le possibilità di consegna.<br />";
+$lang['negozio_text0']="Chiamate per conoscere la disponibilità dei nostri prodotti e le possibilità di consegna.<br /> Per il periodo di quarantena causato 
+	da COVID-19 abbiamo aderito al programma Monferrato Delivery<br/> Potete trovare i nostri prodotti disponibili per consegne locali a questo indirizzo: <br/>";
 $lang['par_manutenzione']="Visitate la nostra pagina facebook:";
 
 $lang['indirizzo']="Indirizzo";

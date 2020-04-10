@@ -37,6 +37,7 @@
             </li>
         </ul>
         <h3 class="center"><?php echo $lang['negozio_text0']?></h3>
+		<h2 class="center"><a href="https://www.monferratodelivery.it/"><img src="images\MDLogo.png" alt="Monferrato Delivery"></a></h2>
         <h3 class="center"><?php echo $lang['par_manutenzione']?></h3>
         <h3 class="center"><img src="images/fb.png" width="50px" height="auto"/><br /><a href="https://www.facebook.com/crovamassimovini/">Crova Massimo Vini</a></h3>
     </body>
