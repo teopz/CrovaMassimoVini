@@ -15,6 +15,7 @@ $lang['index_text0']="<p class=\"pJustify\">Since 1903 Crova family produces in 
     From grandad Renzo's love for the earth and dad Pietro's passion, now is Massimo that takes care of the
     6 hectars of vineyard that spans between the villages of Sala Monferrato and Ozzano Monferrato,
     both Unesco Heritage from 2015 among the vineyard landscapes of Langhe Roero and Monferrato.</p>";
+$lang['index_text1']="<p class=\"pJustify\">We are now certified as one of the Italian Excellences! Come visit us in this page: </p>";
 $lang['azienda_text0']="<p class=\"pJustify\">Since 1903 Crova family produces in Sala Monferrato (AL) tipical Monferrato Casalese's wines.<br/>
     From grandad Renzo's love for the earth and dad Pietro's passion, now is Massimo that takes care of the
     6 hectars of vineyard that spans between the villages of Sala Monferrato and Ozzano Monferrato,

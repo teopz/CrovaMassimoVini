@@ -40,6 +40,8 @@
             <div class="fieldsetInternal">
                 <div class="page-wrap">
                     <h3 class="center"><?php echo $lang['index_text0']?></h3>
+                    <h3 class="center"><?php echo $lang['index_text1']?></h3>
+                    <h3 class="center"><a href="https://www.eccellenzeitaliane.com/aziende/Crova+Massimo+Vini/10070870"><img src="images/eccellenze.png" width="150px" height="auto"/></a></h3>
                 </div>
                 <img class="IndexIMG" src="images/crova.jpg" />
             </div>
